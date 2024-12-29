@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - TravelX</title>
+  <style>
+    /* Styling for the registration page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      background-image: url(https://thumbs.dreamstime.com/z/thailand-26831016.jpg?ct=jpeg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ff6600;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff6600;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #e65500;
+    }
+
+    .form-container p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .form-container p a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+
+    .form-container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Welcome to TravelX</h1>
+      <form id="signupForm">
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="index.html">Sign In</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Function to save form data to localStorage
+    function saveToLocalStorage(fullname, email, password) {
+      localStorage.setItem("userFullName", fullname);
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+    }
+
+    // Handle form submission
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form from submitting and refreshing the page
+
+      // Get the input values
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      // Check if the passwords match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+
+      // Save the data in localStorage
+      saveToLocalStorage(fullname, email, password);
+
+      // Optionally, display a success message or redirect the user
+      alert("Signup successful! Please log in now.");
+      window.location.href = "index.html"; // Redirect to login page after successful signup
+    });
+  </script>
+</body>
+</html>
+
+
