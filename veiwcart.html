@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Cart</title>
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      padding: 15px;
+      background-color: #007BFF;
+      color: white;
+      margin: 0;
+    }
+    .cart-container {
+      padding: 15px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .cart-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #2200ff;
+      color: white;
+      margin: 5px;
+    }
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cart Details</h1>
+  </header>
+
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <h2>Confirmed Bookings</h2>
+    <div id="confirmedItems"></div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+  </div>
+
+  <script>
+    // Fetch cart and confirmed items from localStorage
+    const cartData = JSON.parse(localStorage.getItem('cartData'));
+    const cart = cartData ? cartData.cart : [];
+    const confirmed = cartData ? cartData.confirmed : [];
+
+    function displayCart() {
+      const cartItemsDiv = document.getElementById('cartItems');
+      const confirmedItemsDiv = document.getElementById('confirmedItems');
+
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = "<p>No items in the cart.</p>";
+      } else {
+        cartItemsDiv.innerHTML = cart.map(place => `<div class="cart-item">${place}</div>`).join('');
+      }
+
+      if (confirmed.length === 0) {
+        confirmedItemsDiv.innerHTML = "<p>No confirmed bookings.</p>";
+      } else {
+        confirmedItemsDiv.innerHTML = confirmed.map(place => `<div class="cart-item">${place}</div>`).join('');
+      }
+    }
+
+    // Clear cart functionality
+    function clearCart() {
+      localStorage.removeItem('cartData');
+      alert("Cart has been cleared.");
+      location.reload(); // Reload page to update the cart
+    }
+
+    // Go back to the homepage or any other page
+    function goBack() {
+      window.location.href = 'file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/more.html'; // Navigate back to the destination page
+    }
+
+    // Proceed to payment
+    function proceedToPayment() {
+      window.location.href = 'payment.html'; // Adjust to actual payment page URL
+    }
+
+    // Display cart items when the page loads
+    displayCart();
+  </script>
+</body>
+</html>
