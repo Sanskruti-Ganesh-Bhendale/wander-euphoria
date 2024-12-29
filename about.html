@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Wonder Euphoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe5d9; /* Peach background */
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White box */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ffd1dc; /* Light pink border */
+        }
+        .photo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .photo img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #ffd1dc; /* Light pink border */
+        }
+        .owner-name {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6f91; /* Pink text */
+            margin-top: 10px;
+        }
+        h1, h2 {
+            color: #ff6f91; /* Pink headings */
+            text-align: center;
+        }
+        .box {
+            background-color: #ffe5d9; /* Peach box */
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ffd1dc; /* Light pink border */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Hidden initially */
+            transform: translateX(-50%); /* Positioned offscreen */
+            animation: fly-in 1s ease-out forwards; /* Fly-in animation */
+        }
+        .box:nth-child(2) {
+            animation-delay: 0.2s; /* Delay for staggered effect */
+        }
+        .box:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        .box:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li::before {
+            content: "🌍 "; /* Add globe emoji before each item */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+        @keyframes fly-in {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo">
+            <img src="https://cdn5.vectorstock.com/i/1000x1000/33/59/person-gray-photo-placeholder-woman-vector-22863359.jpg" alt="Your Photo">
+            <div class="owner-name">Owned by <strong>[SANSKRUTI GANESH BHENDALE🌟]</strong></div>
+        </div>
+        <h1>🌟 About Us 🌟</h1>
+        <div class="box">
+            <p>Welcome to <strong>Wonder Euphoria</strong>, your trusted travel companion for crafting unforgettable journeys. ✈🏝</p>
+        </div>
+        <h2>🎯 Our Mission</h2>
+        <div class="box">
+            <p>Our mission is to curate personalized travel experiences that inspire, rejuvenate, and leave you with cherished memories. From exotic destinations to hidden gems, we ensure every detail is meticulously planned so you can focus on enjoying the moment. 🗺</p>
+        </div>
+        <h2>💡 Why Choose Wonder Euphoria?</h2>
+        <div class="box">
+            <ul>
+                <li><strong>Tailored Experiences:</strong> Every trip is customized to suit your preferences and desires. 🎒</li>
+                <li><strong>Expert Guidance:</strong> Our team of travel enthusiasts brings local insights and expert advice to ensure a seamless experience. 🧭</li>
+                <li><strong>Customer-Centric Approach:</strong> Your satisfaction is our priority, and we strive to exceed expectations. 🏆</li>
+            </ul>
+        </div>
+        <h2>✨ Join the Journey</h2>
+        <div class="box">
+            <p>Step into a world of wonder with us and let Wonder Euphoria redefine how you travel. Contact us today to begin your next great adventure! 🚀</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Wonder Euphoria. All rights reserved. 🧳
+    </footer>
+</body>
+</html>
+
