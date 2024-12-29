@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Please Contact for More Info if Needed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> <!-- Added Indie Flower font -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #fffefe,#ffb3b3, #f6f5f4);
+      background-size: cover;
+      text-align: center;
+
+    }
+
+    /* Animation for peach-box */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .peach-box {
+ background-color: rgba(223, 36, 80, 0.15);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0px 8px 15px rgba(48, 43, 43, 1.5);
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+      height: 85%;
+    }
+
+    .peach-box h1 {
+      font-family: 'Indie Flower', cursive; /* Apply Indie Flower font */
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .peach-box p {
+      color: #2f0413;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+ background-color: rgba(244, 239, 241, 0.9);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      color: #3d0316;
+    }
+
+    .contact-info a {
+      color: #f1457b;
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      margin: 5px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      background-color: #f7ce5d;
+      transform: translateY(-5px); /* Animation on hover */
+      background: linear-gradient();
+    }
+
+    @media screen and (max-width: 600px) {
+      .peach-box {
+        width: 90%;
+        padding: 25px;
+      }
+
+      .peach-box h1 {
+        font-size: 28px;
+      }
+
+      .peach-box p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="peach-box">
+    <h1><u>Contact Us for More Information!</u></h1>
+    <p>If you have any questions or need further details, feel free to reach out.</p>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+      <p><strong>Email:</strong> <a href="mailto:example@email.com">example@email.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/yourusername" target="_blank">@yourusername</a></p>
+      <p><strong>Twitter:</strong> <a href="https://twitter.com/yourusername" target="_blank">@yourusername</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/yourprofile" target="_blank">yourprofile</a></p>
+    </div>
+  </div>
+</body>
+</html>
+
