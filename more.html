@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worldwide Tourist Places</title>
+  <!-- Import Indie Flower font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      padding: 15px;
+      background-color: #007BFF;
+      color: white;
+      margin: 0;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 15px;
+    }
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .grid-item {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .grid-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .grid-item p {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #2200ff;
+      color: white;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .view-cart {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: #f5f8f5;
+    }
+    .view-cart:hover {
+      background-color: #218838;
+      justify-content: right;
+      justify-items: right;
+    }
+  </style>
+</head>
+<body>
+  <h1> </h1>
+  <header>
+    <h1> <u>✈Wander</u> <u>Euphoria</u> </h1>
+  </header>
+ <a href="file:\\\C:\Users\sansk\OneDrive\Desktop\New folder\Untitled-1.html">
+    <button class="view-cart">HOME</button>
+  </a>
+<a href="file:\\\C:\Users\sansk\OneDrive\Desktop\New folder\veiwcart.html">
+  <button class="view-cart" onclick="goToCartPage()">View Cart</button>  </a>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://i.natgeofe.com/k/c41b4f59-181c-4747-ad20-ef69987c8d59/eiffel-tower-night.jpg?wp=1&w=1084.125&h=1627.5" alt="Eiffel Tower">
+      <p>Eiffel Tower, Paris</p>
+      <button onclick="addToCart('Eiffel Tower')">Add to Cart</button>
+      <button onclick="confirmBooking('Eiffel Tower')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqklgyLbTFNpYRnPd_uwCNNmnRI50WEfuemg&s" alt="Great Wall of China">
+      <p>Great Wall of China</p>
+      <button onclick="addToCart('Great Wall of China')">Add to Cart</button>
+      <button onclick="confirmBooking('Great Wall of China')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStIK0Ob0c6SgTjw09z3JaP-Tyb5dq8uQ3fWg&s" alt="Colosseum, Rome">
+      <p>Colosseum, Rome</p>
+      <button onclick="addToCart('Colosseum, Rome')">Add to Cart</button>
+      <button onclick="confirmBooking('Colosseum, Rome')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/800px-Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu">
+      <p>Machu Picchu, Peru</p>
+      <button onclick="addToCart('Machu Picchu')">Add to Cart</button>
+      <button onclick="confirmBooking('Machu Picchu')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzLMqttWZQoOLcTSp0Q0ru3L_Ji3twen0OSQ&s" alt="Taj Mahal">
+      <p>Taj Mahal, India</p>
+      <button onclick="addToCart('Taj Mahal')">Add to Cart</button>
+      <button onclick="confirmBooking('Taj Mahal')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu2igXjMqqyOhvjHzF-bl5r0c_WR3QeaAq2Q&s" alt="Pyramids of Giza">
+      <p>Pyramids of Giza, Egypt</p>
+      <button onclick="addToCart('Pyramids of Giza')">Add to Cart</button>
+      <button onclick="confirmBooking('Pyramids of Giza')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://cdn.asp.events/CLIENT_Oliver_K_15A4C8AE_5056_B739_54CFDE58102DEF33/sites/sydney-build-2024/media/libraries/sydney-build-blog/Sydney%20Opera%20House%20image.png" alt="Sydney Opera House">
+      <p>Sydney Opera House, Australia</p>
+      <button onclick="addToCart('Sydney Opera House')">Add to Cart</button>
+      <button onclick="confirmBooking('Sydney Opera House')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://i.natgeofe.com/n/f01fa8fc-d26a-4da1-8704-c73b789aabbd/santorini_AWL_GRE1919AW_HR.jpg?w=1280&h=853" alt="Santorini">
+      <p>Santorini, Greece</p>
+      <button onclick="addToCart('Santorini')">Add to Cart</button>
+      <button onclick="confirmBooking('Santorini')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://npf-prod.imgix.net/uploads/shutterstock_56386615.jpg?auto=compress%2Cformat&fit=max&q=80&w=1600" alt="Statue of Liberty">
+      <p>Statue of Liberty, USA</p>
+      <button onclick="addToCart('Statue of Liberty')">Add to Cart</button>
+      <button onclick="confirmBooking('Statue of Liberty')">Confirm Booking</button>
+    </div>
+    <div class="grid-item">
+      <img src="https://cdn-ikppcfn.nitrocdn.com/jqtVDbjdfBPrQSiPhMihAdYLibcqMkkx/assets/images/optimized/rev-4c3905d/sevennaturalwonders.org/wp-content/uploads/2023/12/Natural-wonders-of-Japan.jpg" alt="Mount Fuji">
+      <p>Mount Fuji, Japan</p>
+      <button onclick="addToCart('Mount Fuji')">Add to Cart</button>
+      <button onclick="confirmBooking('Mount Fuji')">Confirm Booking</button>
+    </div>
+  </div>
+
+  <button class="view-cart" onclick="goToCartPage()">View Cart</button>
+
+  <script>
+     function addToCart(destination) {
+      let cartData = JSON.parse(localStorage.getItem('cartData')) || { cart: [], confirmed: [] };
+      cartData.cart.push(destination);
+      localStorage.setItem('cartData', JSON.stringify(cartData));
+      alert(destination + " added to cart!");
+    }
+
+    // Function to view cart page
+    function viewCart() {
+      window.location.href = 'file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/veiwcart.html'; 
+    }
+    
+  </script>
+</body>
+</html>
+
