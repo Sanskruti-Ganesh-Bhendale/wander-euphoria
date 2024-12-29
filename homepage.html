@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xyz123.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="C:\Users\sansk\OneDrive\Desktop\New folder\contact.html">
+    <link href="C:\Users\sansk\OneDrive\Desktop\New folder\indispsgr.html">
+    <link href="C:\Users\sansk\OneDrive\Desktop\New folder\privacypolicypage.html">
+    <link href="C:\Users\sansk\OneDrive\Desktop\New folder\project login.html">
+    <link href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/indispsgr.htm">
+    <link href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/japan.html">
+    <style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #e41c3d;
+        color: #333;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    header {
+        background: #333;
+        color: #fff;
+        padding: 50px 0;
+        font-family: 'Indie Flower', sans-serif;
+        text-decoration: dotted;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/028/741/315/large_2x/chinese-ancient-architecture-panoramic-view-of-the-forbidden-city-at-sunset-digital-oil-color-painting-illustration-ai-generated-photo.jpg);
+        background-size: 1500px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 3.4em;
+        font-family: 'Indie Flower', sans-serif ;
+        text-shadow: #030007;
+        font-weight: 500;
+        transform: translate(0%);
+        animation: slideIn 2.5s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-25%);
+        }
+    }
+
+    header h3 {
+        text-align: center;
+        text-shadow: #030007;
+        transform: translate(0%);
+        animation: slideon 2.5s ease-out forwards;
+    }
+
+    @keyframes slideon {
+        from {
+            transform: translateX(25%);
+        }
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-family: 'Indie Flower', sans-serif;
+        font-size: 1.7em;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Main Content Styles */
+    .content {
+        background: #ed7c7c;
+        padding: 20px 0;
+        margin-top: 20px;
+        background: linear-gradient(  #f6d8d0,#ef876a,#e41c3d);
+    }
+
+    .content h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 1.1em;
+    }
+
+    /* Grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        opacity: 0;
+        animation: fadean 2.5s forwards;
+    }
+
+    .grid-item {
+        background-color: #ff7e5f;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        background: linear-gradient(45deg, #f6d8d0, #ef876a);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: #333;
+    }
+
+    @keyframes slidean {
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadean {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .grid-item:hover {
+        transform: scale(1.1);
+        transition: transform 2.5s ease;
+    }
+    #search-bar {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        outline: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    footer {
+        background: #fd5f5f;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+
+    .grid-item button {
+        margin-top: auto;
+        padding: 10px;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: blue;
+        background: linear-gradient(#1b013d,blue);
+        width: 30%;
+    }
+
+    .grid-item button:hover {
+        background-color: #555;
+    }
+    #search-bar {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        outline: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; 
+            padding: 10px;
+        }
+    }
+
+    .grid-item-1 {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQylGinfD_KoypPmi_T-CBQZNX76NNIe0uKBg&s);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .grid-item-2 {
+        background-image: url(https://drupal-prod.visitcalifornia.com/sites/default/files/styles/opengraph_1200x630/public/2021-04/VC-Disneyland-Reopen-Mickey-SUPPLIED-1280x640.jpg.webp?itok=uC4W0FOB);
+        background-size: cover; 
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .grid-item-3 {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDEsDtOdIdNXwvXmWG1WZhd0CiNXqqOulOg&s);
+        background-size: cover; 
+        color: rgb(41, 44, 214);
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .grid-item-4 {
+        background-image:  url(https://m.economictimes.com/thumb/msid-93504219,width-1200,height-1200,resizemode-4,imgsize-145174/japan.jpg);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .grid-item-5 {
+        background-image: url(https://www.flamingotravels.co.in/blog/wp-content/uploads/2024/07/Switzerland-Tourism.jpg);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .grid-item-6 {
+        background-image: url(https://cdn.britannica.com/31/255531-050-B7E07090/eiffel-tower-paris-france-champ-de-mars-view.jpg);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transform: translateX(-100%);
+        animation: slidean 2.5s ease-out forwards;
+        height: 270px;
+        box-shadow: #333;
+    }
+
+    .buttons {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: blue;
+        background: linear-gradient(#1b013d,#7207fd);
+    
+    }
+      
+    @media (max-width: 1024px) {
+        header h1 {
+            font-size: 3em;
+        }
+
+        nav ul {
+            font-size: 1.5em;
+        }
+
+        .content h2 {
+            font-size: 1.8em;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            font-size: 1.3em;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr; 
+            padding: 10px;
+        }
+
+        .grid-item {
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        .content h2 {
+            font-size: 1.6em;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        #search-bar {
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 3em;
+        }
+
+        nav ul {
+            flex-direction: column;
+            font-size: 1.2em;
+            align-items: center;
+           
+        }
+
+        .grid-item {
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        .content h2 {
+            font-size: 1.5em;
+        }
+
+        footer p {
+            font-size: 0.8em;
+        }
+
+        #search-bar {
+            font-size: 0.9em;
+        }
+    }
+    .more{
+        margin-top: auto;
+        display: flex;
+        justify-content: right;
+        gap: 10px;
+        background-color: blue;
+        background: linear-gradient(#1b013d,#7207fd);
+        width: 10%;
+        border-radius: 4px;
+        justify-self:right;
+        color:#fff;
+       max-height: 45px;
+       height: 40px;
+       text-align: center;
+       font-size: 26px;
+       font-family:  'Indie Flower', cursive;
+    }
+    
+    .mo{
+        justify-content: right;
+        align-items: end;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><u>✈Wander</u> <u>Euphoria</u></h1>
+            <div>
+                <h3>"Unleash the traveler within-discover, explore, experience euphoria in every journey"</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/homepage.html">Home</a></li>
+                    <li><a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/about.html">About</a></li>
+                    <li><a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/login.html">Login</a></li>
+                    <li><a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/contact.html">Contact</a></li>
+                    <li><a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/privacypolicypage.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="grid-container">
+            <div class="grid-item-1 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/india.html"><h2>INDIA</h2></a>
+                <div class="grid-footer">
+                <button onclick="addToCart('India')">Add to Cart</button>
+                <button onclick="confirmBooking('India')">Confirm Booking</button>
+                <button >2000$</button>
+               
+            </div>
+            </div>
+            <div class="grid-item-2 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/disney.html"><h2>DISNEYLAND</h2></a>
+                <div class="grid-footer-2">
+                <button onclick="addToCart('Disneyland')">Add to Cart</button>
+                <button onclick="confirmBooking('Disneyland')">Confirm Booking</button>
+                <button >3000$</button>
+               
+            </div>
+            </div>
+            <div class="grid-item-3 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/veitnam.html"><h2>VIETNAM</h2></a>
+                <div class="grid-footer-3" >
+                <button onclick="addToCart('Vietnam')">Add to Cart</button>
+                <button onclick="confirmBooking('Vietnam')">Confirm Booking</button> <button >3000$</button>
+            </div>
+            </div>
+            <div class="grid-item-4 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/japan.html"><h2>JAPAN</h2></a><div class="grid-footer-4">
+                <button onclick="addToCart('Japan')">Add to Cart</button>
+                <button onclick="confirmBooking('Japan')">Confirm Booking</button> <button >3000$</button>
+                </div>
+            </div>
+            <div class="grid-item-5 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/switzerland.html.html"><h2>Switzerland</h2></a>
+                <div class="grid-footer-5">
+                <button onclick="addToCart('Switzerland')">Add to Cart</button>
+                <button onclick="confirmBooking('Switzerland')">Confirm Booking</button> <button >3000$</button>
+            </div>
+            </div>
+            <div class="grid-item-6 grid-item">
+                <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/paris.html"><h2>PARIS</h2></a>
+                <div class="grid-footer-5">
+                <button onclick="addToCart('Paris')">Add to Cart</button>
+                <button onclick="confirmBooking('Paris')">Confirm Booking</button> <button >3000$</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="mo">
+        <a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/more.html">
+            <button class="more">
+MORE>>>>>
+            </button>
+        </a>
+</div>
+    
+
+    <footer>
+        <p>&copy; 2024 WANDER EUPHORIA|<a href="file:///C:/Users/sansk/OneDrive/Desktop/New%20folder/privacypolicypace.html">PRIVACY POLICY</a></p>
+
+    </footer>
+
+    <script>
+    // Simulating a cart system using JavaScript
+    let cart = [];
+
+    function addToCart(destination) {
+        cart.push(destination);
+        alert(destination + " has been added to your cart!");
+        console.log(cart); // Just to check the cart content
+    }
+
+    function confirmBooking(destination) {
+        if (cart.includes(destination)) {
+            alert("Your booking for " + destination + " is confirmed!");
+        } else {
+            alert("Please add " + destination + " to your cart first.");
+        }
+    }
+    </script>
+</body>
+</html>
