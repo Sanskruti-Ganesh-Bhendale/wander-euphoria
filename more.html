@@ -58,6 +58,7 @@
       background-color: #2200ff;
       color: white;
       font-size: 14px;
+      
     }
     button:hover {
       background-color: #0056b3;
@@ -151,8 +152,7 @@
     </div>
   </div>
 
-  <button class="view-cart" onclick="goToCartPage()">View Cart</button>
-
+  
   <script>
      function addToCart(destination) {
       let cartData = JSON.parse(localStorage.getItem('cartData')) || { cart: [], confirmed: [] };
